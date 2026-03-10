@@ -6,6 +6,8 @@
     --blue: #3b82f6;
     --cyan: #06b6d4;
     --orange: #f59e0b;
+    --purple: #a855f7;
+    --green: #10b981;
 }
 
 * {
@@ -22,7 +24,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px; /* Nieco szerzej dla większej liczby kart */
     margin: 0 auto;
 }
 
@@ -36,7 +38,7 @@ body {
     font-size: 2.8rem;
     font-weight: 800;
     margin-bottom: 10px;
-    background: linear-gradient(to right, var(--blue), var(--cyan));
+    background: linear-gradient(to right, var(--blue), var(--purple));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -50,7 +52,7 @@ body {
 /* Grid */
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 30px;
 }
 
@@ -86,7 +88,7 @@ body {
     margin: 0;
 }
 
-/* Lista cenowa - klucz do przejrzystości */
+/* Lista cenowa */
 .price-list {
     list-style: none;
     padding: 0;
@@ -95,7 +97,7 @@ body {
 
 .price-list li {
     display: grid;
-    grid-template-columns: 1fr auto; /* Nazwa zajmuje resztę, cena tyle ile trzeba */
+    grid-template-columns: 1fr auto;
     gap: 20px;
     align-items: center;
     padding: 12px 0;
@@ -116,17 +118,21 @@ body {
     font-size: 1rem;
     font-variant-numeric: tabular-nums;
     text-align: right;
-    white-space: nowrap; /* Zapobiega łamaniu ceny */
+    white-space: nowrap;
 }
 
 /* Kolory akcentowe */
 .border-blue { border-top: 4px solid var(--blue); }
 .border-cyan { border-top: 4px solid var(--cyan); }
 .border-orange { border-top: 4px solid var(--orange); }
+.border-purple { border-top: 4px solid var(--purple); }
+.border-green { border-top: 4px solid var(--green); }
 
 .icon-blue { color: var(--blue); }
 .icon-cyan { color: var(--cyan); }
 .icon-orange { color: var(--orange); }
+.icon-purple { color: var(--purple); }
+.icon-green { color: var(--green); }
 
 /* Footer */
 .footer {
